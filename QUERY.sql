@@ -82,3 +82,15 @@ AND match_status = 'Available';
 -- =========================================================================
 SELECT user_id, full_name, email FROM Users
 WHERE full_name ILIKE 'Tanvir%' OR full_name ILIKE '%Haque%'
+
+-- =========================================================================
+-- Query 3: Retrieve all booking records where the payment status is missing (NULL), replacing the empty result with 'Action Required'.
+-- =========================================================================
+
+SELECT 
+    booking_id, 
+    user_id, 
+    match_id,
+    COALESCE(payment_status, 'Action Required') as systematic_status
+FROM Bookings
+WHERE payment_status IS NULL;
