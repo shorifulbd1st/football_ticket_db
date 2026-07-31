@@ -1,0 +1,1 @@
+CREATE DATABASE football_ticket_db;
