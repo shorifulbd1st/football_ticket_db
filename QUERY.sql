@@ -128,3 +128,14 @@ SELECT
   b.total_cost 
 FROM Bookings b
 WHERE total_cost > (SELECT AVG(total_cost) FROM Bookings);
+
+-- =========================================================================
+-- Query 7: Retrieve the top 2 most expensive matches sorted by base ticket price, skipping the absolute highest premium match.
+-- =========================================================================
+SELECT 
+  m.match_id,
+  m.fixture,
+  m.base_ticket_price
+FROM Matches m
+ORDER BY base_ticket_price DESC 
+LIMIT 2 OFFSET 1;
