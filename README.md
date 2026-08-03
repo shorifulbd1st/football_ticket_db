@@ -193,9 +193,7 @@ CHECK (
 
 ## 📝 Implemented Queries
 
-### Query 1
-
-Retrieve all available Champions League matches.
+### Query 1: Retrieve all upcoming football matches belonging to the 'Champions League' where the match status is 'Available'.
 
 **Concepts Used**
 
@@ -204,9 +202,8 @@ Retrieve all available Champions League matches.
 
 ---
 
-### Query 2
 
-Search users by name pattern.
+### Query 2: Search for all users whose full names start with 'Tanvir' or contain the phrase 'Haque' (case-insensitive).
 
 **Concepts Used**
 
@@ -215,9 +212,7 @@ Search users by name pattern.
 
 ---
 
-### Query 3
-
-Handle NULL payment status values.
+### Query 3: Retrieve all booking records where the payment status is missing (`NULL`), replacing the empty result with 'Action Required'.
 
 **Concepts Used**
 
@@ -226,9 +221,7 @@ Handle NULL payment status values.
 
 ---
 
-### Query 4
-
-Retrieve booking details with user and match information.
+### Query 4: Retrieve match booking details along with the User's full name and the scheduled Match fixture teams.
 
 **Concepts Used**
 
@@ -236,9 +229,7 @@ Retrieve booking details with user and match information.
 
 ---
 
-### Query 5
-
-Display all users including those without bookings.
+### Query 5: Display a comprehensive list of all users and their booking IDs, ensuring that fans who have *never* bought a ticket are still listed.
 
 **Concepts Used**
 
@@ -246,9 +237,7 @@ Display all users including those without bookings.
 
 ---
 
-### Query 6
-
-Find bookings above average booking cost.
+### Query 6: Find all ticket bookings where the total cost is strictly higher than the average cost of all ticket bookings.
 
 **Concepts Used**
 
@@ -257,9 +246,7 @@ Find bookings above average booking cost.
 
 ---
 
-### Query 7
-
-Retrieve the most expensive matches while skipping the highest-priced match.
+### Query 7: Retrieve the top 2 most expensive matches sorted by base ticket price, skipping the absolute highest premium match.
 
 **Concepts Used**
 
